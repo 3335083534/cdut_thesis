@@ -1,0 +1,74 @@
+\documentclass{cdut_thesis}
+\usepackage{listings} % 导入 listings 宏包，实现代码块
+% 设置 listings 的全局样式
+% 设置代码块样式
+\lstset{
+	language=TeX, % 语言设置为TeX
+	basicstyle=\ttfamily, % 字体样式
+	backgroundcolor=\color{gray!10}, % 背景色
+	keywordstyle=\color{blue}, % 关键词颜色
+	commentstyle=\color{green!60!black}, % 注释颜色
+	showstringspaces=false, % 不显示字符串中的空格
+	breaklines=true, % 自动断行
+	numbers=left, % 行号位置
+	numberstyle=\tiny\color{gray}, % 行号样式
+	frame=single, % 代码块边框
+	rulecolor=\color{black}, % 边框颜色
+	xleftmargin=\parindent, % 左边距
+}
+\TitleCDUT{成都理工大学本科毕业论文非官方\LaTeX 模板}{Unofficial graduation thesis of Chengdu University of Technology \LaTeX template}
+\KeywordCDUT{\LaTeX ；排版系统；毕业论文}{\LaTeX ;Typesetting system;Graduation thesis}% 注意用分号
+\AuthorCDUT{姓名}
+\StudentnumberCDUT{\quad}
+\AdvisorCDUT{张三}{教授}
+\MajorCDUT{数学与应用数学2班}
+% 多少届的毕业生
+\GradeCDUT{2024}
+
+\begin{document}
+%\includepdf{body/封面.pdf}% 不需要，若需要，将封面放到body中
+% 摘要以及目录的页眉页脚
+\fronthead
+\makezhcover
+
+\begin{chineseabstract}
+%目的、方法、结果、意义
+这是成都理工大学本科生毕业论文\textbf{非官方} \LaTeX 模板。
+	
+\textbf{v1.1：}本模板在\href{https://github.com/cs-whh/CDUT_thesis}{\color{red}GitHub：CDUT\_thesis项目}的基础上作了部分修改，以符合学校最新要求。
+	
+\textbf{注意：}本模板在编写过程中尽可能满足学校要求，由于原始规范主要针对Word。和\LaTeX 之间不可避免的差异加之编写者的水平有限，所以难免和学校提供的基于Word的样张存在细微差异，请谨慎使用！
+\end{chineseabstract}
+
+
+
+\begin{englishabstract}
+This is an unofficial \ LaTeX template for graduate thesis of Chengdu University of Technology.
+\end{englishabstract}
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+% 正文的页眉页脚
+\texthead
+
+%论文主体内容
+\include{body/section_1}%第一章：绪论
+\include{body/section_2}%第二章：相关理论
+\include{body/section_3}%第三章：应用实践
+\include{body/section_4}
+\include{body/section_5}
+%结论、致谢、参考文献
+\include{body/conclusion}
+\include{body/thanks}
+
+% 引用 .bib 文件
+
+
+\include{body/references}
+%\include{body/appendix}%附录。一般可以没有
+\end{document}
+
